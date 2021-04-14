@@ -8,7 +8,7 @@ import { Doctor } from '../models/doctor';
 })
 export class DoctorService {
 
-  linkApi = 'http://localhost:8080/doctor/';
+  linkApi = 'https://fullstack-javascript-309920.uc.r.appspot.com/doctor/';
 
   constructor(private httpClient: HttpClient) { }
 
