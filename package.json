@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -27,7 +27,6 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "bootstrap": "^4.6.0",
-    "cloudinary-core": "^2.11.3",
     "express": "^4.17.1",
     "ng2-file-upload": "^1.4.0",
     "ngx-spinner": "^11.0.1",

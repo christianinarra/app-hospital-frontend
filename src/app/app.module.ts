@@ -24,7 +24,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { CloudinaryModule, CloudinaryConfiguration } from '@cloudinary/angular-5.x';
 import { Cloudinary } from 'cloudinary-core';
 import { ListSpecialtyComponent } from './specialty/list-specialty.component';
 import { NewSpecialtyComponent } from './specialty/new-specialty.component';
@@ -59,8 +58,7 @@ import { EditHistoricComponent } from './historic/edit-historic.component';
     ToastrModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    NgxSpinnerModule,
-    CloudinaryModule.forRoot({Cloudinary}, { cloud_name: 'dtpvwe64y' } as CloudinaryConfiguration),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
