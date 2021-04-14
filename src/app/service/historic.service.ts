@@ -8,7 +8,7 @@ import { Historic } from '../models/historic';
 })
 export class HistoricService {
 
-  linkApi = 'https://fullstack-javascript-309920.uc.r.appspot.com/historic/';
+  linkApi = 'http://localhost:8080/historic/';
 
   constructor(private httpClient: HttpClient) { }
 
