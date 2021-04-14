@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header">
+      <h3>List Specialties</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+              <tr class="text-center">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>            
+            <th scope="col">Photo</th>            
+            <th scope="col">Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of specialties">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.description}}</td>
+            <td>
+              <div *ngIf="data.avatarIcon">
+                <img class="image-thumbnail" style="max-width: 100px" src="{{data.avatarIcon}}">
+              </div>   
+            </td>
+            <td>
+              <a class="btn btn-warning" routerLink="/specialty/edit/{{data.id}}"><i class="fas fa-edit fa-xs"></i></a>            
+              <a class="btn btn-danger" (click)="deleteSpecialty(data)"><i class="fas fa-trash fa-xs"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

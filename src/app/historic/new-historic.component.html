@@ -1,0 +1,31 @@
+<h4 class="mb-3">Form Patient Historical</h4>
+<form class="needs-validation" (ngSubmit)="onCreate()" novalidate #f="ngForm">
+    
+    <div class="mb-3">
+        <label for="description">Description</label>
+        <textarea class="form-control rounded-0" id="description" name="description" rows="3" [(ngModel)]="description"></textarea>
+    </div>    
+
+    <div class="mb-3">
+        <label for="dateVisit">Date of Visit</label>
+        <input type="date" class="form-control" id="dateVisit" name="dateVisit" value="" [(ngModel)]="dateVisit" required>        
+    </div>    
+    <div class="mb-3">
+        <label for="hospital">Doctors</label>
+        <select [(ngModel)]="doctorId" class="form-control" name="hospital">
+            <option value="" selected>- Select Doctor -</option>
+            <option *ngFor="let data of doctors" [ngValue]="data.id"> {{data.name}} {{data.lastName}} </option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="hospital">Patient</label>
+        <select [(ngModel)]="patientId" class="form-control" name="hospital">
+            <option value="" selected>- Select Patient -</option>
+            <option *ngFor="let data of patients" [ngValue]="data.id"> {{data.name}} {{data.lastName}} </option>
+        </select>
+    </div>
+
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Save</button>
+</form>

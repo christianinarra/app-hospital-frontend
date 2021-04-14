@@ -1,0 +1,29 @@
+$black:black;
+$font-family-base:
+  // Safari for OS X and iOS (San Francisco)
+  -apple-system,
+  // Chrome < 56 for OS X (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // Android
+  "Roboto",
+  // Basic web fallback
+  "Helvetica Neue", Arial, sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base:1rem;
+$font-weight-base:400;
+$line-height-base:1.5;
+$body-color:'#212529';
+$body-bg:'#fff';
+$headings-margin-bottom:.5rem;
+$paragraph-margin-bottom:1rem;
+$dt-font-weight:300;
+$font-weight-bolder:400;
+$link-color:'#007bff';
+$link-decoration:'none';
+$link-hover-color:'#007bff';
+$link-hover-decoration:'none';
+$font-family-monospace:'Monospace';
+$label-margin-bottom:.5rem;

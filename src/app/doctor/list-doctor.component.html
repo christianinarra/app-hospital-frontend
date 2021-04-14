@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    <h3>List Hospitals</h3>
+  </div>
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+            <tr class="text-center">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Date Birth</th>
+          <th scope="col">Photo</th>
+          <th scope="col">Hospital Work</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doctor of doctors">
+          <td>{{doctor.id}}</td>
+          <td>{{doctor.name}}</td>
+          <td>{{doctor.lastName}}</td>        
+          <td>{{doctor.dateBirth | date :'mediumDate'}}</td>        
+          <td>
+            <div *ngIf="doctor.profilePhoto">
+              <img class="image-thumbnail" style="max-width: 100px" src="{{doctor.profilePhoto}}">
+            </div>   
+          </td>        
+          <td>{{doctor.hospital.name}}</td>        
+          <td>
+            <a class="btn btn-warning" routerLink="/doctor/edit/{{doctor.id}}"><i class="fas fa-edit fa-xs"></i></a>            
+            <a class="btn btn-danger" (click)="deleteDoctor(doctor)"><i class="fas fa-trash fa-xs"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

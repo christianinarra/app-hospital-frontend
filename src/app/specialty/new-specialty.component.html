@@ -1,0 +1,15 @@
+<h4 class="mb-3">Form Patient</h4>
+<form class="needs-validation" (ngSubmit)="onCreate()" novalidate #f="ngForm">
+    
+    <div class="mb-3">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="" [(ngModel)]="name" required>        
+    </div>
+    <div class="mb-3">
+        <label for="description">Description</label>
+        <textarea class="form-control rounded-0" id="description" name="description" rows="3" [(ngModel)]="description"></textarea>
+    </div>    
+
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Save</button>
+</form>

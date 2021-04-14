@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>List Hospitals</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hospital of hospitals">
+            <td>{{hospital.id}}</td>
+            <td>{{hospital.name}}</td>
+            <td>{{hospital.address}}</td>        
+            <td class="text-center">
+              <a class="btn btn-warning" routerLink="/hospital/edit/{{hospital.id}}"><i class="fas fa-edit"></i></a> &nbsp;
+              <a class="btn btn-danger" (click)="deleteHospital(hospital)"><i class="fas fa-trash"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
